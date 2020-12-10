@@ -21,7 +21,9 @@
   <body>
     <header class="header">
       <div class="header__logo-container">
-        <img src="assets/img/logo.svg" alt="Header-logo" class="header__logo" />
+        <a href="#">
+          <img src="assets/img/logo.svg" alt="Header-logo" class="header__logo"
+        /></a>
       </div>
       <nav class="nav">
         <ul class="list">
@@ -32,24 +34,26 @@
       </nav>
     </header>
 
-    <section class="started">
-      <div class="started__img-container">
-        <img
-          src="assets/img/illustration-intro.png"
-          alt="get-started"
-          class="started__img"
-        />
-      </div>
-      <h1 class="started__title">
-        All your files in one secure location, accessible anywhere.
-      </h1>
-      <h2 class="started__subtitle">
-        Fylo stores all your most important files in one secure location. Access
-        them wherever you need, share and collaborate with friends family, and
-        co-workers.
-      </h2>
-      <a href="#" class="started__link">Get Started </a>
-    </section>
+    <div class="started-wrapper">
+      <section class="started">
+        <div class="started__img-container">
+          <img
+            src="assets/img/illustration-intro.png"
+            alt="get-started"
+            class="started__img"
+          />
+        </div>
+        <h1 class="started__title">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <h2 class="started__subtitle">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </h2>
+        <a href="#" class="started__link">Get Started </a>
+      </section>
+    </div>
     <main class="main">
       <section class="cards">
         <article class="card">
@@ -123,8 +127,52 @@
           </p>
           <a href="#" class="productive__link">
             <span>See how Fylo works</span>
-            <span class="productive__arrow">
-              <i class="fas fa-long-arrow-alt-right"></i>
+            <span class="productive__arrow-container">
+              <svg
+                width="16"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <circle
+                    id="b"
+                    cx="6"
+                    cy="6"
+                    r="6"
+                    class="productive__arrow"
+                  />
+                  <filter
+                    x="-25%"
+                    y="-25%"
+                    width="150%"
+                    height="150%"
+                    filterUnits="objectBoundingBox"
+                    id="a"
+                  >
+                    <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+                    <feGaussianBlur
+                      stdDeviation="1"
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                    />
+                    <feColorMatrix
+                      values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
+                      in="shadowBlurOuter1"
+                    />
+                  </filter>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(2 2)">
+                    <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                    <use fill="#62E0D9" xlink:href="#b" />
+                  </g>
+                  <path
+                    d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                    fill="#1B2330"
+                  />
+                </g>
+              </svg>
             </span>
           </a>
         </div>
