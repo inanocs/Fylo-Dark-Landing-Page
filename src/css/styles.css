@@ -555,6 +555,12 @@ li:not(:last-child) .list__item {
     align-items: center;
     grid-row: 1 / span 3;
   }
+
+  .location__img {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+  }
+
   .email {
     grid-column: 2/-1;
     grid-row: 2/2;
