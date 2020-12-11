@@ -233,12 +233,27 @@ li:not(:last-child) .list__item {
   margin-top: 1.4em;
 }
 
+.form-register__error {
+  margin-left: 1rem;
+  color: var(--light-red-error);
+  margin-bottom: 0;
+}
+
+.form-register__item:first-child {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 20px;
+}
+
 .form-register__input,
 .form-register__submit {
   border: none;
   outline: none;
   border-radius: 2em;
   padding: 15px 23px;
+  width: 100%;
 }
 
 .form-register__input::placeholder {
@@ -467,11 +482,6 @@ li:not(:last-child) .list__item {
   .form-register {
     flex-direction: row;
     justify-content: space-evenly;
-  }
-
-  .form-register__input {
-    flex: 1;
-    margin-right: 20px;
   }
 
   .form-register__submit {
